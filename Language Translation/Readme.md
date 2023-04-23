@@ -25,7 +25,9 @@ The first step in preparing the data for training is to tokenize the sentences a
 
 Next, we pad the sequences to a fixed length using the pad_sequences function from the same module. This ensures that all sequences have the same length, which is necessary for efficient training of the model.
 
-# Model ArchitectureThe translate_sentence function takes an input sentence in the source language and generates a translated sentence in the target language using the trained model. The function first tokenizes and pads the input sentence, and then initializes the decoder input with a start token. It then runs the model in a loop to generate the output sentence one word at a time, until it reaches the maximum output length or predicts an end token.
+# Model Architecturev
+
+The translate_sentence function takes an input sentence in the source language and generates a translated sentence in the target language using the trained model. The function first tokenizes and pads the input sentence, and then initializes the decoder input with a start token. It then runs the model in a loop to generate the output sentence one word at a time, until it reaches the maximum output length or predicts an end token.
 
 Finally, the function converts the output sequence back into a sentence and returns it.
 The model architecture consists of an encoder and decoder, both implemented as recurrent neural networks (RNNs) with long short-term memory (LSTM) cells. The encoder processes the input sentence and generates a context vector, which is passed to the decoder to generate the output sentence.
